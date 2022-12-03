@@ -14,7 +14,7 @@ def init_array(length):
     return array
 
 
-def negative_numbers_multiplication (array):
+def negative_numbers_multiplication(array):
     negative_numbers = [i for i in array if i < 0]
     negative_result = 1
     for num in negative_numbers:
@@ -22,14 +22,13 @@ def negative_numbers_multiplication (array):
     return negative_result
 
 
-def before_max_summary (array):
+def before_max_summary(array):
     max_el = array.index(max(array))
     before_max_el = []
     for i in range(0, max_el):
-        if (array[i] >= 0):
+        if array[i] >= 0:
             before_max_el.append(array[i])
     return sum(before_max_el)
-
 
 
 if __name__ == '__main__':
@@ -38,4 +37,5 @@ if __name__ == '__main__':
     pprint(userNums)
     print("Произведение отрицательных элементов: " + str(negative_numbers_multiplication(userNums)))
     print("Сумма положительных эл-ов, расположенных до максимального: " + str(before_max_summary(userNums)))
-    
+    userNums.reverse()
+    print(userNums)
