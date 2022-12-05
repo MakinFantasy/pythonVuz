@@ -1,11 +1,21 @@
 file = open('file2.txt')
 
 
-text = file.readlines()
+def first():
+    values_str = file.readline().split(' ')
+    values = []
+    for i in values_str:
+        values.append(int(i))
+    print(values)
 
-nums = []
-for line in text:
-    el = line.split(' ')
-    for i in el:
-        nums.append(int(i))
-print(nums)
+
+def sec():
+    values_str = file.readline().split(' ')
+    values = []
+    for i in values_str:
+        values.append(int(i))
+    print(values)
+
+
+first()
+sec()
