@@ -1,9 +1,9 @@
 import numpy as np
 
+
 def main():
     try:
-        n=int(input("Введите размер матрицы (NxN): "))
-
+        n = int(input("Введите размер матрицы (NxN): "))
 
         A = np.random.randint(-3, 10, (n, n))
         for Row in range(n):
@@ -11,27 +11,12 @@ def main():
                 print("{0:>5.0f}".format(A[Row][Col]), end=" ")
             print()
         print()
-        
 
-        # summ = 0
-        # isNeg = False
-
-        # for i in range(n):
-        #     for j in range(n):
-        #         if A[i][j] < 0:
-        #             isNeg = True
-        #             continue
-        #         summ += A[i][j]
-        #     if isNeg == False:
-        #         print("Сумма элементов всех строк без отрицательного элемента: ", summ)
-        #     sum = 0
-        #     isNeg = False
-            
         sum_arr = []
         for i in range(len(A)):
             sum = 0
             flag = True
-            for el in A[i]: 
+            for el in A[i]:
                 if el >= 0:
                     sum += el
                 else:
@@ -43,7 +28,6 @@ def main():
 
             else:
                 print("В строке есть отрицательные элементы")
-        
 
         res = 0
         for i in sum_arr:
