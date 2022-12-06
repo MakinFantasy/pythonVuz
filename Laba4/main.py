@@ -30,6 +30,7 @@ def negative_numbers_multiplication(array):
 def before_max_summary(array):
     try:
         max_el = array.index(max(array))
+        print("Max: " + str(array[max_el]) + "Index: " + str(max_el))
         before_max_el = []
         for i in range(0, max_el):
             if array[i] >= 0:
@@ -48,6 +49,7 @@ if __name__ == '__main__':
         pprint(userNums)
         print("Произведение отрицательных элементов: " + str(negative_numbers_multiplication(userNums)))
         print("Сумма положительных эл-ов, расположенных до максимального: " + str(before_max_summary(userNums)))
+        print(userNums)
         userNums.reverse()
         print(userNums)
     except Exception as e:
