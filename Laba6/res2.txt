@@ -1,0 +1,2 @@
+Negative nums multiplication: -216
+Positive nums sum before max: 26

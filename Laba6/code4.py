@@ -1,8 +1,23 @@
-from random import uniform
-from pprint import pprint
-
-
 file = open('file2.txt')
+res = open('res2.txt', 'a')
+
+
+def clear_file():
+    try:
+        res.truncate(0)
+    except Exception as e:
+        print(e)
+        print(e.__doc__)
+        exit(1)
+
+
+def clear_line():
+    try:
+        res.write('\n')
+    except Exception as e:
+        print(e)
+        print(e.__doc__)
+        exit(1)
 
 
 def init_array():
@@ -24,6 +39,7 @@ def negative_numbers_multiplication(array):
         for num in negative_values:
             negative_result *= num
         print("Negative nums multiplication: " + str(negative_result))
+        res.write("Negative nums multiplication: " + str(negative_result))
         return negative_result
     except Exception as e:
         print(e)
@@ -41,6 +57,7 @@ def before_max_summary(array):
             if array[i] >= 0:
                 result += array[i]
         print('Positive nums sum before max: ' + str(result))
+        res.write('Positive nums sum before max: ' + str(result))
         return result
     except Exception as e:
         print(e)
@@ -50,8 +67,10 @@ def before_max_summary(array):
 
 if __name__ == '__main__':
     try:
+        clear_file()
         arr = init_array()
         negative_numbers_multiplication(arr)
+        clear_line()
         before_max_summary(arr)
     except Exception as e:
         print(e)
