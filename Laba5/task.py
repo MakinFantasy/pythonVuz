@@ -1,6 +1,5 @@
 import numpy as np
 
-
 def main():
     try:
         n = int(input("Введите размер матрицы (NxN): "))
@@ -40,7 +39,7 @@ def main():
         for i in range(countDiagonal):
             t = n - i - 1
             row = -t if t < 0 else 0
-            col = t if t > 0 else 0
+            col = t-1 if t > 0 else 0
             while row < n and col < n:
                 sumArray += A[row][col]
                 row += 1
