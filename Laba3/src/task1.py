@@ -43,7 +43,7 @@ def calculate():
         x, end, dx, r = params[0], params[1], params[2], params[3]
         data(params)
         counter = 0
-        while x != end + 1:
+        while x <= end + 1:
             
             if x <= -1:
                 y = -x - 1
